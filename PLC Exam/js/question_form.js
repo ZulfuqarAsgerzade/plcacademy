@@ -1,5 +1,5 @@
 // TIMEBAR
-const totalDuration = 2 * 60 * 60 * 1000; // 2 hours
+const totalDuration = 2 * 10 * 10 * 1000; // 2 hours
 const progressBar = document.getElementById('progress-bar');
 const timeRemainingText = document.getElementById('minute');
 

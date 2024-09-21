@@ -37,16 +37,42 @@
                     <path d="M12.5313 12.3351C14.8392 12.3351 16.7102 10.4642 16.7102 8.15626C16.7102 5.84833 14.8392 3.97738 12.5313 3.97738C10.2234 3.97738 8.35242 5.84833 8.35242 8.15626C8.35242 10.4642 10.2234 12.3351 12.5313 12.3351Z" stroke="white" stroke-width="1.25366" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <input type="text" class="registration_inputTxt" placeholder="Username">
+                <input type="text" id="student_name" class="registration_inputTxt" placeholder="Ad">
             </div>
 
             <div class="registration_inputContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M20.889 22.7823V20.6929C20.889 19.5846 20.4488 18.5216 19.6651 17.738C18.8814 16.9543 17.8185 16.514 16.7102 16.514H8.35243C7.24412 16.514 6.18121 16.9543 5.39752 17.738C4.61383 18.5216 4.17355 19.5846 4.17355 20.6929V22.7823" stroke="white" stroke-width="1.25366" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.5313 12.3351C14.8392 12.3351 16.7102 10.4642 16.7102 8.15626C16.7102 5.84833 14.8392 3.97738 12.5313 3.97738C10.2234 3.97738 8.35242 5.84833 8.35242 8.15626C8.35242 10.4642 10.2234 12.3351 12.5313 12.3351Z" stroke="white" stroke-width="1.25366" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <input type="text" id="student_surname" 
+                       class="registration_inputTxt" placeholder="Soyadınız">
+            </div>
+
+            <div class="camera_container">
+                <video id="video" width="350" height="200" autoplay></video>
+                <canvas id="canvas" width="350" height="200" style="display:none;"></canvas>
+
+                <img id="student_photo" alt="Tələbənin şəkli">
+            </div>
+
+            <ul class="camera_btns">
+                <li>
+                    <button id="snap">Şəkil çək</button>
+                </li>
+                <li>
+                    <button id="confirm">Təsdiq et</button>
+                </li>
+            </ul>
+
+            <div class="registration_inputContainer" id="student_password">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M19.8443 11.8231H5.21827C4.0643 11.8231 3.12883 12.7586 3.12883 13.9126V21.2256C3.12883 22.3796 4.0643 23.315 5.21827 23.315H19.8443C20.9983 23.315 21.9338 22.3796 21.9338 21.2256V13.9126C21.9338 12.7586 20.9983 11.8231 19.8443 11.8231Z" stroke="white" stroke-width="1.25366" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M7.30771 11.8231V7.64428C7.30771 6.25889 7.85805 4.93025 8.83766 3.95064C9.81728 2.97103 11.1459 2.42068 12.5313 2.42068C13.9167 2.42068 15.2453 2.97103 16.2249 3.95064C17.2045 4.93025 17.7549 6.25889 17.7549 7.64428V11.8231" stroke="white" stroke-width="1.25366" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <input type="password" class="registration_inputTxt" placeholder="Password">
+                <input type="password" class="registration_inputTxt" placeholder="İmtahan şifrəsi">
             </div>
 
             <input type="submit" class="registration_submitBtn" value="Daxil ol">
@@ -54,6 +80,7 @@
         </form>
     </div>
     
+    <script src="./js/camera.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
