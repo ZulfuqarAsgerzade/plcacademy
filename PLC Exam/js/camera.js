@@ -45,15 +45,19 @@ document.getElementById("confirm").addEventListener("click", function(event) {
 
     let studentName = document.getElementById("student_name").value;
     let studentSurname = document.getElementById("student_surname").value;
+    let studentEmail = document.getElementById("student_email").value;
     let studentPhotoSrc = document.getElementById("student_photo").src;
 
-    let lettersOnly = /^[A-Za-zĞÜŞİÖÇğüşiöç]+$/;
+    let lettersPattern = /^[A-Za-zĞÜŞİÖÇğüşiöç]+$/;
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (studentName.trim() != "" && 
         studentName.trim() != "" & 
         studentPhotoSrc.trim() != "") 
     {
-        if (lettersOnly.test(studentName) && lettersOnly.test(studentSurname)) 
+        if (lettersPattern.test(studentName) && 
+            lettersPattern.test(studentSurname) &&
+            emailPattern.test(studentEmail)) 
         {
             document.getElementById("student_password").style.display = "flex";
             document.getElementsByClassName("registration_submitBtn")[0].style.display = "block";
